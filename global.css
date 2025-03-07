@@ -1,0 +1,127 @@
+body
+{
+    margin: 0px; /* remove the stupid page border */
+    background-color: rgb(64, 64, 64);
+    cursor: default;
+}
+p
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    cursor: default;
+}
+.attention
+{
+    color:rgb(255, 147, 147);
+    background-color: rgb(95, 80, 61);
+    padding: 20px
+}
+.border
+{
+    border: 2px solid white;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    padding-bottom: 20px;
+    transition-duration: 350ms;
+}
+.border:hover
+{
+    /*border: 2px solid rgb(130, 130, 130); no long needed*/
+    transform: scale(1.005);
+}
+.normalButton
+{
+    /*padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;*/
+    width: 150px;
+    height: 40px;
+    border: dimgray solid 2px;
+    transition-duration: 250ms;
+    transform-origin: center center;
+    background-color: transparent;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+.normalButtonSelected
+{
+    padding: 20px;
+    border:rgb(64, 64, 64) solid 2px;
+    transition-duration: 250ms;
+    transform-origin: center center;
+    background-color: rgb(64, 64, 64);
+    color: white;
+    position: absolute;
+}
+.normalButtonSelected:hover
+{
+    transform: none !important;
+}
+.normalButton:hover
+{
+    background-color: rgb(141, 141, 141);
+    transform: scale(1.2) translate(-40%, -0%);
+    transform-origin: center;
+}
+.normalButton:active
+{
+    transition-duration: 50ms;
+    background-color: rgb(121, 121, 121);
+    /*margin-top: 13px;  replaced by scaling!!*/
+    transform: scale(1.0) translate(-50%, -0%);
+}
+.titleBarButton
+{
+    padding: 5px;
+    margin: 10px;
+    margin-right: 10px;
+    right: 0;
+    border:rgb(64, 64, 64) solid 2px;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+.titleBarButton:hover
+{
+    transform: scale(1.2) /*translateY(-3px)*/;
+}
+.heading
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+.center
+{
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#header
+{
+    background-color: dimgray;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+#MainIconPFP
+{
+    width: 50px;
+    height: 50px;
+}
+#MainHeaderText
+{
+    vertical-align: middle;
+    position: absolute;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+}
