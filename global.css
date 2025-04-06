@@ -19,7 +19,7 @@ p
 }
 .border
 {
-    border: 2px solid white;
+    border: 2px solid rgb(200, 200, 200);
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 25px;
@@ -28,8 +28,8 @@ p
 }
 .border:hover
 {
-    /*border: 2px solid rgb(130, 130, 130); no long needed*/
-    transform: scale(1.005);
+    border: 2px solid white;
+    /*transform: scale(1.005);*/
 }
 .normalButton
 {
@@ -46,6 +46,28 @@ p
     color: white;
     position: relative;
     display: inline-block;
+}
+.normalButtonSmall
+{
+    /*padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;*/
+    width: 120px;
+    height: 30px;
+    border: dimgray solid 2px;
+    transition-duration: 250ms;
+    transform-origin: center center;
+    background-color: transparent;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+.normalButtonSmall:hover
+{
+    background-color: rgb(141, 141, 141);
+    transform: scale(1.2) translate(-40%, -0%);
+    transform-origin: center;
 }
 .normalButtonSelected
 {
