@@ -1,51 +1,118 @@
 body
 {
     margin: 0px; /* remove the stupid page border */
-    background-color: rgb(64, 64, 64);
+    background-color: rgb(30, 30, 30);
     cursor: default;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a
+{
+    font-size: 0px
 }
 p
 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     text-align: center;
     cursor: default;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 49px;
+    margin-right: 49px;
+    border-radius: 5px;
+    transition-duration: 200ms;
+    background-color: rgb(45, 45, 45);
+}
+input
+{
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    cursor: default;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 49px;
+    margin-right: 49px;
+    border-radius: 5px;
+    transition-duration: 200ms;
+    background-color: rgb(45, 45, 45);
+}
+p:hover
+{
+    background-color: rgb(50, 50, 50);
+}
+.pDoNotBg
+{
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    cursor: default;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 49px;
+    margin-right: 49px;
+    border-radius: 5px;
+    transition-duration: 200ms;
+    background-color: transparent;
+}
+.pDoNotBg:hover
+{
+    background-color: transparent;
+}
+hr
+{
+    width: 70%;
+    height: 1px;
+    background-color: white;
+    border: 0px transparent solid;
+    padding: 1px;
+    border-radius: 500px;
+}
+.lowerHr
+{
+    width: 70%;
+    height: 1px;
+    background-color: rgb(120, 120, 120);
+    border: 0px transparent solid;
+    padding: 1px;
+    border-radius: 500px;
 }
 .attention
 {
     color:rgb(255, 147, 147);
     background-color: rgb(95, 80, 61);
-    padding: 20px
+    padding: 20px;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    cursor: default;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 0px;
+    transition-duration: 200ms;
+}
+.attention:hover
+{
+    background-color: rgb(95, 80, 61) !important;
 }
 .border
 {
-    border: 2px solid rgb(200, 200, 200);
+    border: 2px solid rgb(160, 160, 160);
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 25px;
     padding-bottom: 20px;
-    transition-duration: 350ms;
+    transition-duration: 200ms;
+    border-radius: 5px;
+    background-color: rgb(45, 45, 45);
 }
 .border:hover
 {
-    border: 2px solid white;
+    border: 2px solid white;/*
     /*transform: scale(1.005);*/
-}
-.normalButton
-{
-    /*padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;*/
-    width: 150px;
-    height: 40px;
-    border: dimgray solid 2px;
-    transition-duration: 250ms;
-    transform-origin: center center;
-    background-color: transparent;
-    color: white;
-    position: relative;
-    display: inline-block;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    transform: translateY(-2px);
+    background-color: rgb(50, 50, 50);
 }
 .normalButtonSmall
 {
@@ -55,19 +122,22 @@ p
     padding-right: 30px;*/
     width: 120px;
     height: 30px;
-    border: dimgray solid 2px;
+    border: 2px solid rgb(160, 160, 160);
+    border-radius: 5px;
     transition-duration: 250ms;
     transform-origin: center center;
     background-color: transparent;
     color: white;
     position: relative;
     display: inline-block;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .normalButtonSmall:hover
 {
     background-color: rgb(141, 141, 141);
-    transform: scale(1.2) translate(-40%, -0%);
-    transform-origin: center;
+    /* transform: scale(1.2) translate(-40%, -0%);
+    transform-origin: center; */
+    transform: translate(-50%, -2px);
 }
 .normalButtonSelected
 {
@@ -83,37 +153,59 @@ p
 {
     transform: none !important;
 }
+
+.normalButton
+{
+    /*padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;*/
+    width: 150px;
+    height: 40px;
+    border: 2px solid rgb(160, 160, 160);
+    transition-duration: 250ms;
+    transform-origin: center center;
+    background-color: transparent;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
 .normalButton:hover
 {
-    background-color: rgb(141, 141, 141);
-    transform: scale(1.2) translate(-40%, -0%);
-    transform-origin: center;
+    background-color: rgb(090, 090, 090);
+    transform: translate(-50%, -2px);
 }
 .normalButton:active
 {
     transition-duration: 50ms;
-    background-color: rgb(121, 121, 121);
+    background-color: rgb(070, 070, 070);
     /*margin-top: 13px;  replaced by scaling!!*/
-    transform: scale(1.0) translate(-50%, -0%);
+    /* transform: scale(1.0) translate(-50%, -0%); */
 }
 .titleBarButton
 {
     padding: 5px;
     margin: 10px;
     margin-right: 10px;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     right: 0;
     border:rgb(64, 64, 64) solid 2px;
+    border-radius: 5px;
     position: absolute;
     width: auto;
     height: auto;
 }
 .titleBarButton:hover
 {
-    transform: scale(1.2) /*translateY(-3px)*/;
+    /* transform: scale(1.2); */
+    transform: translateY(-2px);
+    
 }
 .heading
 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     text-align: center;
 }
@@ -127,17 +219,29 @@ p
 
 #header
 {
-    background-color: dimgray;
+    position: fixed !important;
+    border-radius: 5px;
+    background-color: rgb(50, 50, 50);
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 50px;
+    width: 90%;
     position: relative;
     overflow: hidden;
+    opacity: 100% !important;
+    z-index: 9999;
+
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
 }
 #MainIconPFP
 {
     width: 50px;
     height: 50px;
+    position: absolute;
+    left: 0px;
 }
 #MainHeaderText
 {
@@ -146,4 +250,7 @@ p
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 15px;
+    position: absolute;
+    font-size: large;
+    left: 50px;
 }
