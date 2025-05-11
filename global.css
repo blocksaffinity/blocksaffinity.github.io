@@ -184,18 +184,37 @@ hr
     /*margin-top: 13px;  replaced by scaling!!*/
     /* transform: scale(1.0) translate(-50%, -0%); */
 }
-.titleBarButton
+@media (max-width: 601px)
 {
-    padding: 5px;
-    margin: 10px;
-    margin-right: 10px;
-    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    right: 0;
-    border:rgb(64, 64, 64) solid 2px;
-    border-radius: 5px;
-    position: absolute;
-    width: auto;
-    height: auto;
+    .titleBarButton
+    {
+        padding: 5px;
+        margin: 10px;
+        margin-right: 10px;
+        font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        right: 0;
+        border:rgb(64, 64, 64) solid 2px;
+        border-radius: 5px;
+        position: absolute;
+        width: auto;
+        height: auto;
+    }
+}
+@media (min-width: 600px)
+{
+    .titleBarButton
+    {
+        padding: 5px;
+        margin: 10px;
+        margin-right: 10px;
+        font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        right: 0;
+        border:rgb(64, 64, 64) solid 2px;
+        border-radius: 5px;
+        position: absolute;
+        width: auto;
+        height: auto;
+    }
 }
 .titleBarButton:hover
 {
@@ -216,25 +235,49 @@ hr
     transform: translateX(-50%);
     text-align: center;
 }
-
-#header
+@media (max-width: 601px)
 {
-    position: fixed !important;
-    border-radius: 5px;
-    background-color: rgb(50, 50, 50);
-    color: white;
-    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 50px;
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-    opacity: 100% !important;
-    z-index: 9999;
+    #header
+    {
+        position: fixed !important;
+        background-color: rgb(50, 50, 50);
+        color: white;
+        font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        opacity: 100% !important;
+        z-index: 9999;
+        top: 0px;
+    }
+}
+@media (min-width: 600px)
+{
+    #header
+    {
+        position: fixed !important;
+        border-radius: 5px;
+        background-color: rgb(50, 50, 50);
+        color: white;
+        font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        height: 50px;
+        width: 90%;
+        overflow: hidden;
+        opacity: 100% !important;
+        z-index: 9999;
 
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    text-align: center;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+@media (max-width: 400px)
+{
+    #MainIconPFP
+    {
+        opacity: 0%;
+    }
 }
 #MainIconPFP
 {
@@ -243,14 +286,24 @@ hr
     position: absolute;
     left: 0px;
 }
-#MainHeaderText
+@media (max-width: 530px)
 {
-    vertical-align: middle;
-    position: absolute;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 15px;
-    position: absolute;
-    font-size: large;
-    left: 50px;
+    #MainHeaderText
+    {
+        font-size: 0px;
+    }
+}
+@media (min-width: 531px)
+{
+    #MainHeaderText
+    {
+        vertical-align: middle;
+        position: absolute;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 15px;
+        position: absolute;
+        font-size: large;
+        left: 50px;
+    }
 }
