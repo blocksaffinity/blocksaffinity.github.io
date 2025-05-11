@@ -94,25 +94,42 @@ hr
 {
     background-color: rgb(95, 80, 61) !important;
 }
-.border
+@media (min-width: 570px)
 {
-    border: 2px solid rgb(160, 160, 160);
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-    padding-bottom: 20px;
-    transition-duration: 200ms;
-    border-radius: 5px;
-    background-color: rgb(45, 45, 45);
+    .border
+    {
+        border: 2px solid rgb(160, 160, 160);
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 25px;
+        padding-bottom: 20px;
+        transition-duration: 200ms;
+        border-radius: 5px;
+        background-color: rgb(45, 45, 45);
+    }
 }
-.border:hover
+@media (max-width: 571px)
 {
-    border: 2px solid white;/*
-    /*transform: scale(1.005);*/
-    /* margin-left: 20px;
-    margin-right: 20px; */
-    transform: translateY(-2px);
-    background-color: rgb(50, 50, 50);
+    .border
+    {
+        border: 2px solid rgb(160, 160, 160);
+        margin-top: 25px;
+        padding-bottom: 20px;
+        transition-duration: 200ms;
+        background-color: rgb(45, 45, 45);
+    }
+}
+@media (min-width: 570px)
+{
+    .border:hover
+    {
+        border: 2px solid white;/*
+        /*transform: scale(1.005);*/
+        /* margin-left: 20px;
+        margin-right: 20px; */
+        transform: translateY(-2px);
+        background-color: rgb(50, 50, 50);
+    }
 }
 .normalButtonSmall
 {
@@ -198,6 +215,7 @@ hr
         position: absolute;
         width: auto;
         height: auto;
+
     }
 }
 @media (min-width: 600px)
@@ -235,7 +253,7 @@ hr
     transform: translateX(-50%);
     text-align: center;
 }
-@media (max-width: 599px)
+@media (max-width: 600px)
 {
     #header
     {
@@ -249,6 +267,7 @@ hr
         opacity: 100% !important;
         z-index: 9999;
         top: 0px;
+        transition-duration: 200ms;
     }
 }
 @media (min-width: 600px)
@@ -270,30 +289,39 @@ hr
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         text-align: center;
+        transition-duration: 200ms;
     }
 }
-@media (max-width: 400px)
+@media (max-width: 420px)
 {
     #MainIconPFP
     {
-        opacity: 0%;
+        transform: scaleX(-1%);
+        transform: scaleY(-1%);
     }
 }
-#MainIconPFP
+@media (min-width: 421px)
 {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 0px;
+    #MainIconPFP
+    {
+        transform: scaleX(100%);
+        transform: scaleY(100%);
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 0px;
+        transition-duration: 200ms;
+    }
 }
-@media (max-width: 530px)
+@media (max-width: 550px)
 {
     #MainHeaderText
     {
         font-size: 0px;
+        transition-duration: 200ms;
     }
 }
-@media (min-width: 531px)
+@media (min-width: 551px)
 {
     #MainHeaderText
     {
@@ -305,5 +333,6 @@ hr
         position: absolute;
         font-size: large;
         left: 50px;
+        transition-duration: 200ms;
     }
 }
