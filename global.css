@@ -322,6 +322,7 @@ hr
         color: white;
         font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         height: 50px;
+        width: 100%;
         overflow: hidden;
         opacity: 100% !important;
         z-index: 9999;
@@ -340,9 +341,8 @@ hr
         height: 50px;
         width: 90%;
         overflow: hidden;
-        opacity: 100% !important;
+        opacity: 100%;
         z-index: 9999;
-
 
         left: 50%;
         -ms-transform: translateX(-50%);
