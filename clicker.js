@@ -1,5 +1,6 @@
 let score = 0;
 let increment = 1;
+let upgradeCost = 1;
 let PissOffUsers = false;
 
 // <code off stack overflow>
@@ -30,6 +31,7 @@ async function upgrade()
     if (CanPlayerUpgrade())
     {
         document.getElementById('increment').innerHTML = "INCREMENT: " + increment;
+        updateUpgradeCost();
     }
     else
     {
@@ -47,70 +49,33 @@ async function upgrade()
     document.getElementById('score').innerHTML = "SCORE: " + score;
     ValidateScore();
 }
+function updateUpgradeCost()
+{
+    document.getElementById('upgradecost').innerHTML = "Upgrade Cost: " + upgradeCost;
+}
 function CanPlayerUpgrade()
 {
-    if (increment <= 10)
+    updateUpgradeCost;
+    if (score >= (upgradeCost * 2))
     {
-        if (score >= 10)
+        if (increment < 5000) {
+            increment += 10;
+            score -= upgradeCost;
+        }
+        else if (increment < 75000)
         {
-            increment = increment + 1;
-            score = score - (increment * 10)
-            return true;
+            increment += 100;
+            score -= upgradeCost;
         }
-        else {
-            return false;
-        }
-    }
-    else if (increment <= 50)
-    {
-        if (score >= 100)
+        else
         {
-            increment = increment + 5;
-            score = score - (increment * 10)
-            return true;
+            increment *= 2;
+            score -= upgradeCost;
         }
-        else 
-        {
-            return false;
-        }
-    }
-    else if (increment <= 250)
-    {
-        if (score >= 750)
-        {
-            increment = increment + 15;
-            score = score - (increment * 10)
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
-    }
-    else if (increment <= 10000)
-    {
-        if (score >= 2500)
-        {
-            increment = increment + 50;
-            score = score - (increment * 10)
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        return true;
     }
     else
     {
-        if (score >= 50000)
-        {
-            increment = increment * 2;
-            score = score - (increment * 10)
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        return false;
     }
 }
