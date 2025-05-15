@@ -8,6 +8,28 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 // </code off stack overflow>
+
+function setup()
+{
+    score = Number(localStorage.getItem("blocksaffinity_score")) || 1;
+    increment = Number(localStorage.getItem("blocksaffinity_increment")) || 1;
+
+    document.getElementById('score').innerHTML = "SCORE: " + score;
+    document.getElementById('increment').innerHTML = "INCREMENT: " + increment;
+
+    if (score < 0)
+    {
+        score = 1;
+        document.getElementById('score').innerHTML = "SCORE: " + score;
+    }
+}
+
+function reset()
+{
+    score = 1;
+    increment = 1;
+}
+
 function ValidateScore()
 {
     if (score < 0)
@@ -25,13 +47,16 @@ function increase()
         score = 1;
         document.getElementById('score').innerHTML = "SCORE: " + score;
     }
+    localStorage.setItem("blocksaffinity_score", score);
 }
 async function upgrade()
 {
+    localStorage.setItem("blocksaffinity_increment", increment);
     if (CanPlayerUpgrade())
     {
         document.getElementById('increment').innerHTML = "INCREMENT: " + increment;
         updateUpgradeCost();
+        localStorage.setItem("blocksaffinity_increment", increment);
     }
     else
     {
@@ -48,6 +73,7 @@ async function upgrade()
     }
     document.getElementById('score').innerHTML = "SCORE: " + score;
     ValidateScore();
+    localStorage.setItem("blocksaffinity_increment", increment);
 }
 function updateUpgradeCost()
 {
