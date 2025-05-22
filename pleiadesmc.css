@@ -1,14 +1,17 @@
 body
 {
     margin: 0px; /* remove the stupid page border */
-    background-color: rgb(30, 30, 30);
+    /* background: linear-gradient(
+        90deg,
+        #527AFF,
+        #3C39EF);  DOES NOT WORK WITH TWINKLING!!*/
+    background-color: black;
     cursor: default;
     font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 a
 {
     font-size: 0px;
-    color: dodgerblue;
     user-select: none;
 }
 br
@@ -23,22 +26,11 @@ p
 {
     font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
-    text-align: center;
     cursor: default;
-    padding: 10px;
-    margin: 10px;
-    margin-left: 49px;
-    margin-right: 49px;
-    border-radius: 5px;
+    margin-left: 20px;
     transition-duration: 200ms;
-    background-color: rgb(45, 45, 45);
     user-select: none;
 }
-p:hover
-{
-    background-color: rgb(60, 60, 60);
-}
-
 input
 {
     font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -52,25 +44,6 @@ input
     border-radius: 5px;
     transition-duration: 200ms;
     background-color: rgb(45, 45, 45);
-}
-
-.pDoNotBg
-{
-    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    text-align: center;
-    cursor: default;
-    padding: 10px;
-    margin: 10px;
-    margin-left: 49px;
-    margin-right: 49px;
-    border-radius: 5px;
-    transition-duration: 200ms;
-    background-color: transparent;
-}
-.pDoNotBg:hover
-{
-    background-color: transparent;
 }
 hr
 {
@@ -93,7 +66,6 @@ hr
 .attention
 {
     color:rgb(255, 147, 147);
-    background-color: rgb(95, 80, 61);
     padding: 20px;
     font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
@@ -102,10 +74,6 @@ hr
     margin: 0px;
     border-radius: 0px;
     transition-duration: 200ms;
-}
-.attention:hover
-{
-    background-color: rgb(95, 80, 61) !important;
 }
 @media (min-width: 570px)
 {
@@ -136,63 +104,33 @@ hr
 {
     .border:hover
     {
-        border: 2px solid white;/*
-        /*transform: scale(1.005);*/
-        /* margin-left: 20px;
-        margin-right: 20px; */
+        border: 2px solid white;
         transform: translateY(-2px);
         background-color: rgb(50, 50, 50);
     }
 }
-.normalButtonSmall
-{
-    /*padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;*/
-    width: 120px;
-    height: 30px;
-    border: 2px solid rgb(160, 160, 160);
-    border-radius: 5px;
-    transition-duration: 250ms;
-    transform-origin: center center;
-    background-color: transparent;
-    color: white;
-    position: relative;
-    display: inline-block;
-    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.normalButtonSmall:hover
-{
-    background-color: rgb(141, 141, 141);
-    /* transform: scale(1.2) translate(-40%, -0%);
-    transform-origin: center; */
-    transform: translate(-50%, -2px);
-}
+
 .normalButtonSelected
 {
     padding: 20px;
-    border:rgb(64, 64, 64) solid 2px;
+    border: 2px solid rgb(45, 45, 45) !important;
     transition-duration: 250ms;
     transform-origin: center center;
-    background-color: rgb(64, 64, 64);
+    background-color: rgb(45, 45, 45);
     color: white;
     position: absolute;
 }
 .normalButtonSelected:hover
 {
     transform: none !important;
+    border: 2px solid rgb(45, 45, 45) !important;
 }
 
 .normalButton
 {
-    /*padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;*/
     width: 150px;
     height: 40px;
-    border: 2px solid rgb(160, 160, 160);
+    border: 2px solid rgb(45, 45, 45);
     transition-duration: 250ms;
     transform-origin: center center;
     background-color: transparent;
@@ -204,60 +142,34 @@ hr
 }
 .normalButton:hover
 {
-    background-color: rgb(090, 090, 090);
-    transform: translate(-50%, -2px);
+    border: 2px solid gray;
 }
 .normalButton:active
 {
     transition-duration: 50ms;
-    background-color: rgb(070, 070, 070);
-    /*margin-top: 13px;  replaced by scaling!!*/
-    /* transform: scale(1.0) translate(-50%, -0%); */
 }
-/* @media (max-width: 699px)
-{ */
-    .titleBarButton
-    {
-        padding: 5px;
-        margin: 10px;
-        margin-right: 10px;
-        font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        right: 0;
-        border:rgb(64, 64, 64) solid 2px;
-        border-radius: 5px;
-        position: absolute;
-        width: auto;
-        height: auto;
-    }
-/* } */
-/*
-@media (min-width: 698px)
+.titleBarButton
 {
-    .titleBarButton
-    {
-        padding: 5px;
-        margin: 10px;
-        margin-right: 10px;
-        font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        right: 0;
-        border:rgb(64, 64, 64) solid 2px;
-        border-radius: 5px;
-        position: absolute;
-        width: auto;
-        height: auto;
-    }
-} */
+    padding: 5px;
+    margin: 10px;
+    margin-right: 10px;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: 0;
+    border: 2px solid rgb(45, 45, 45);
+    border-radius: 5px;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
 .titleBarButton:hover
 {
-    /* transform: scale(1.2); */
-    transform: translateY(-2px);
-    
+    border: 2px solid gray;
 }
 .heading
 {
     font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
-    text-align: center;
+    margin-left: 10px;
     user-select: none;
 }
 .center
@@ -268,60 +180,167 @@ hr
     text-align: center;
 }
 
-.aeroButton
+
+@keyframes move-clouds-back
 {
-    /* background: linear-gradient(
-        to bottom,
-        rgba(223, 255, 219, 0.925) 0%,
-        rgba(143, 255, 128, 0.925) 10%,
-        rgba(114, 255, 95, 0.925) 50%,
-        rgba(87, 255, 65, 0.925) 51%,
-        rgba(136, 255, 120, 0.925) 60%,
-        rgba(31, 255, 2, 0.925) 100%
-    ); */
-    /* background: #b4ffa1; */
-    background: linear-gradient(
-        0deg,
-        rgba(180, 255, 161, 1) 0%, 
-        rgba(64, 255, 0, 1) 49%,
-        rgba(165, 255, 135, 1) 51%,
-        rgba(151, 255, 120, 1) 100%);
-    font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    font-size: 11.5px;;
-    font-weight: 900;
-    height: 31px;
-    width: 91px;
-    border: 2px solid white;
-    transition-duration: 500ms;   
-    box-shadow: 
-    0 0 3px rgb(255, 255, 255),
-    0 0 6px rgb(64, 255, 0), 
-    0 0 9px rgb(64, 255, 0), 
-    0 0 12px rgb(64, 255, 0);
+    from
+    {
+        background-position: 0 0;
+    }
+    to
+    {
+        background-position: 10000px 0;
+    }
 }
-.aeroButton:hover
+
+@keyframes move-twinkle-back
 {
-    /* background: linear-gradient(
-        0deg,
-        rgba(100, 255, 100, 1) 0%, 
-        /* rgba(200, 255, 200, 1) 49%,
-        rgba(100, 255, 100, 1) 51%, */
-        /*rgba(200, 255, 200, 1) 100%); */
-    box-shadow: 
-    0 0 5px rgb(255, 255, 255),
-    0 0 10px rgb(64, 255, 0), 
-    0 0 15px rgb(64, 255, 0), 
-    0 0 20px rgb(64, 255, 0);
-    transform: none !important;
+    from
+    {
+        background-position: 0 0;
+    }
+    to
+    {
+        background-position: -10000px 5000px;
+    }
 }
+
+.stars, .twinkling, .clouds
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.stars
+{
+    background: transparent url(assets/stars.png) repeat top center;
+    z-index: -50;
+}
+
+.twinkling
+{
+    background: transparent url(assets/twinkling.png) repeat top center;
+    z-index: -48;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+.clouds
+{
+    background: transparent url(assets/clouds.png) repeat top center;
+    z-index: -46;
+    opacity: 0.3;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+
+@keyframes p-in
+{
+    from
+    {
+        margin-left: -50px;
+        opacity: 50%;
+    }
+    to
+    {
+        margin-left: 20px;
+        opacity: 100%;
+    }
+}
+@keyframes youredonelooking-in
+{
+    from
+    {
+        margin-left: -500px;
+        opacity: 50%;
+    }
+    to
+    {
+        margin-left: 20px;
+        opacity: 100%;
+    }
+}
+
+#p1
+{
+    margin-left: -50px;
+    opacity: 50%;
+    animation: p-in 400ms cubic-bezier(1, 0.2, 0.2, 1);
+    animation-delay: 50ms;
+    animation-fill-mode: forwards;
+}
+
+#p2
+{    
+    margin-left: -50px;
+    opacity: 50%;
+    animation: p-in 400ms cubic-bezier(1, 0.2, 0.2, 1);
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+}
+
+#p3
+{
+    margin-left: -50px;
+    opacity: 50%;
+    animation: p-in 400ms cubic-bezier(1, 0.2, 0.2, 1);
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+}
+
+#youredonelooking
+{
+    margin-left: -500px;
+    opacity: 50%;
+    animation: youredonelooking-in 2s cubic-bezier(1, 0.2, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+
+#joinBtn
+{
+    width: 150px;
+    height: 40px;
+    border: 2px solid #3C39EF;
+    transition-duration: 250ms;
+    transform-origin: center center;
+    background-color: transparent;
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+#joinBtn:hover
+{
+    border: 2px solid #527AFF;
+    background-color: #527AFF;
+    /* width: 175px;
+    height: 65px; */
+    /* transform: translateY(-5px); */
+    transform-origin: center;
+    box-shadow: 
+    0 0 20px #527AFF;
+}
+#joinBtn:active
+{
+    box-shadow: none;
+    border: 2px solid #3C39EF;
+    background-color: #3C39EF;
+    transform: translateY(5px);
+}
+
 
 @media (max-width: 697px)
 {
     #header
     {
         position: fixed !important;
-        background-color: rgb(50, 50, 50);
         color: white;
         font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         height: 50px;
@@ -338,7 +357,7 @@ hr
     {
         position: fixed !important;
         border-radius: 5px;
-        background-color: rgb(50, 50, 50);
+        backdrop-filter: blur(50px);
         color: white;
         font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         height: 50px;
@@ -394,9 +413,8 @@ hr
         padding-left: 15px;
         position: absolute;
         font-size: large;
-        left: 50px;
+        left: 0px;
         transition-duration: 200ms;
         user-select: none;
     }
 }
-

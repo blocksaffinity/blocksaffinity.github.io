@@ -81,7 +81,7 @@ function updateUpgradeCost()
 }
 function CanPlayerUpgrade()
 {
-    updateUpgradeCost;
+    updateUpgradeCost();
     if (score >= (upgradeCost * 2))
     {
         if (increment < 5000) {
