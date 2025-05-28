@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>blocksaffinity - Projects - JS Clicker</title>
+        <link rel="stylesheet" href="/global.css">
+        <link rel="shortcut icon" href="/assets/blocksaffinity.icon.png" type="image/x-icon">
+        <script src="clicker.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="setup();">
+        <br>
+        <header id="header">
+            <img id="MainIconPFP" src="/assets/blocksaffinity.icon.png" alt="blocksaffinity's Profile Picture">
+            <b id="MainHeaderText" >blocksaffinity</b>
+
+            <a href="/frutiger/index.html">
+                <button class="normalButton titleBarButton aeroButton">Frutiger Aero</button>
+            </a>
+            <a href="/contact/index.html">
+                <button class="normalButton titleBarButton" style="margin-right: 111px;">Contact</button>
+            </a>
+            <a href="/discord/index.html">
+                <button class="normalButton titleBarButton" style="margin-right: 181px;">Discord</button>
+            </a>
+            <a href="/services/index.html">
+                <button class="normalButton titleBarButton" style="margin-right: 250px;">Services</button>
+            </a>
+            <a href="/projects/index.html">
+                <button class="normalButtonSelected titleBarButton" style="margin-right: 322px;">Projects</button>
+            </a>            
+            <a href="/index.html">
+                <button class="normalButton titleBarButton" style="margin-right: 392px;">Home</button>
+            </a>
+        </header>
+
+        <br>
+        <br>
+        <br>
+        <hr>
+        <button onclick="increase()" class="normalButton center" style="margin-top:3%;">Click</button>
+        <br>
+        <button onclick="upgrade()" class="normalButton center" style="margin-top:1%;">Upgrade</button>
+        <br>
+        <br>
+        <p id="score">SCORE: 0</p>
+        <p id="increment">INCREMENT: 1</p>
+
+        <br>
+        <p id="upgradecost">Upgrade Cost: 1</p>
+        <br>
+        <p class="pDoNotBg">Just press Projects again to leave.<br>Your progress will be saved.</p>
+        <br>
+    </body>
+</html>
