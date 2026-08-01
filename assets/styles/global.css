@@ -71,6 +71,15 @@ section {
     }
 }
 
+/* Full desktop */
+@media (min-width: 1200px) 
+{
+    .home-section
+    {
+        transform: translateX(-50%) scale(1.5);
+    }
+}
+
 @media (max-width: 599px) {
     section {
         margin-top: 30px;
