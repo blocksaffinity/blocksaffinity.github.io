@@ -1,0 +1,16 @@
+@media (min-width: 500px) {
+  canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Keep behind content */
+  }
+}
+
+@media (max-width: 499px) {
+  canvas {
+    display: none;
+  }
+}
