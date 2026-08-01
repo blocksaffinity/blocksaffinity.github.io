@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>blocksaffinity | Games</title>
+
+        <link rel="stylesheet" href="/styles/global.css">
+        <link rel="stylesheet" id="theme" href="/styles/dark.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/global.js"></script>
+    </head>
+    <body onload="setup()">
+        <div class="messageBox" id="messageBox" style="visibility: hidden;">
+            <h2 class="center-Text messageBox-Title" id="messageBox-Title">messageBox-Title</h2>
+            <br>
+            <p class="center-Text messageBox-Text" id="messageBox-Text">g</p>
+            <br>
+            <button onclick="const MessageBox = new messageBox(); MessageBox.Button.Click.OK();" style="left: 50%; position: absolute;">OK</button>
+            <br>
+        </div>
+        <section>
+        <div id="navbar"></div>
+        <div id="sidebar"></div>
+    </section>
+        <p class="center-Text"></p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="Games">
+            <div class="Box HoverBox GameCard" onclick="new_tab(BSAAFBIAT)">
+                <img src="/assets/games/flappy_bird_term.png" class="img-scaleToFit img-roundCorners GameCardImgHeader">
+                <hr>
+                <h3>blocksaffinity's shocking attempt at flappy bird in a terminal</h3>
+                <p>
+                    <br>
+                    Poorly made Flappy Bird clone made in a C++ Windows terminal.
+                    <br>
+                    <br>
+                    Sometimes breaks, sorry about that!
+                    <br>
+                    <br>
+                    <i>100% wasn't made by ChatGPT.</i>
+                </p>
+                <img src="/assets/windows-32x.png" class="img-theme GameCardIcon-Win">
+                <p class="FeatProj-callToAction">Download</p>
+            </div>
+
+
+            <div class="Box HoverBox GameCard" onclick="new_tab(BSAAFBIU)">
+                <img src="/assets/games/flappy_bird_unity_v1.png" class="img-scaleToFit img-roundCorners GameCardImgHeader">
+                <hr>
+                <h3>blocksaffinity's shocking attempt at flappy bird in Unity</h3>
+                <p>
+                    <br>
+                    Poorly made Flappy Bird clone made in a C# Unity project.
+                    <br>
+                    <br>
+                    No proper death logic except for closing the window entirely!
+                    <br>
+                    <br>
+                    <i>100% wasn't made with ChatGPT.</i>
+                </p>
+                <img src="/assets/windows-32x.png" class="img-theme GameCardIcon-Win">
+                <p class="FeatProj-callToAction">Download</p>
+            </div>
+
+
+            <div class="Box HoverBox GameCard" onclick="new_tab(JS_CLICKER_V1)">
+                <img src="/assets/games/js_clicker_v1.png" class="img-scaleToFit img-roundCorners GameCardImgHeader">
+                <hr>
+                <h3>JS Clicker V1</h3>
+                <p>
+                    <br>
+                    Something I made on my first website to practice JavaScript.
+                    <br>
+                    <br>
+                    It's a basic clicker game with a simple upgrade and score system.
+                    <br>
+                    <br>
+                    <i><small>The website this game is located at is no longer being updated.<br><br>Please do not ask me to fix any bugs or issues you may encounter.</small></i>
+                </p>
+                <p class="FeatProj-callToAction">Play Now</p>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <footer>
+            <p class="center-Text footer-Text">© blocksaffinity 2026. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

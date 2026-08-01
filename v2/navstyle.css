@@ -1,0 +1,122 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    height: 120px;
+    background-color: #faebd7;
+    box-shadow: 0px 0px 15px 0px;
+}
+
+/* Mobile View */
+@media (max-width: 899px) {
+    img {
+        max-height: 80px;
+        margin: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    ul li {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 900px) {
+    img {
+        max-height: 80px;
+        margin: 20px;
+    }
+
+    ul li {
+        float: right;
+    }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        /* Dropdown styling when it's hidden away */
+        display: block;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        translate: 0px 12px;
+
+        transition-duration: 300ms;
+        opacity: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+
+        /* Dropdown styling when it's down */
+        opacity: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 0px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        margin: 10px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    ul li a {
+        display: block;
+        color: black;
+        line-height: 10px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin: 35px 5px;
+        transition-duration: 300ms;
+        position: relative;
+        border-radius: 4px;
+    }
+
+    ul li a:hover {
+        background-color: #faf5e7;
+    }
+
+    ul li a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: rgb(226, 150, 8);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+        border-radius: 0px;
+    }
+
+    ul li a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+}

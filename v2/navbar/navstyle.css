@@ -1,0 +1,248 @@
+/*
+
+
+THIS IS ALL WIP!!!!!!!!!!!!!
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    background-color: #faebd7;
+    box-shadow: 0px 0px 15px 0px;
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    
+}
+
+Desktop View 
+@media (min-width: 900px) {
+    img {
+        max-height: 80px;
+        margin: 20px;
+    }
+
+    ul li {
+        float: right;
+    }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        translate: 0px 12px;
+
+        transition-duration: 300ms;
+        opacity: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+
+        opacity: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 0px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        margin: 10px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .ul .li a {
+        display: block;
+        color: black;
+        line-height: 10px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin: 35px 5px;
+        transition-duration: 300ms;
+        position: relative;
+        border-radius: 4px;
+    }
+
+    .ul .li a:hover {
+        background-color: #faf5e7;
+    }
+
+    .ul .li a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: rgb(226, 150, 8);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+        border-radius: 0px;
+    }
+
+    .ul .li a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar
+{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 45px;
+    z-index: 999;
+}
+@media (min-width: 800px) {
+    .navbar {
+        margin: 10px;
+        border-radius: 10px;
+        width: calc(100vw - 20px - 4px); /* 100% - 10px(left) - 10px(right) - 4px(scrollbar) */
+        transition-duration: 0ms;
+    }
+}
+
+.navBtns {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    z-index: 0;
+}
+.navBtn {
+    margin: 0;
+    position: static;
+    transform: none;
+    border: none;
+    width: 100px;;
+    border-radius: 0px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    
+
+    background-color: transparent !important;
+    background-size: 100% 0%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition: background-size 350ms ease;
+}
+
+/* @media (min-width: 800px) {
+    .navBtn {
+        opacity: 0;
+        animation: flyIn 1s ease forwards;
+    }
+    .homeBtn 
+    { 
+        animation-delay: 0ms; 
+    }
+
+    .moreBtn 
+    { 
+        animation-delay: 500ms; 
+    }
+
+    .contBtn 
+    { 
+        animation-delay: 400ms; 
+    }
+
+    .projBtn 
+    { 
+        animation-delay: 300ms; 
+    }
+
+    .downBtn 
+    { 
+        animation-delay: 200ms; 
+    }
+
+    .gameBtn 
+    { 
+        animation-delay: 100ms; 
+    }
+}
+@media (max-width: 799px)
+{
+    .navBtn
+    {
+        opacity: 1;
+        transform: translateY(0px);
+        animation: flyOut 1s ease forwards;
+    }
+    .homeBtn 
+    { 
+        animation-delay: 0ms; 
+    }
+
+    .moreBtn 
+    { 
+        animation-delay: 500ms; 
+    }
+
+    .contBtn 
+    { 
+        animation-delay: 400ms; 
+    }
+
+    .projBtn 
+    { 
+        animation-delay: 300ms; 
+    }
+
+    .downBtn 
+    { 
+        animation-delay: 200ms; 
+    }
+
+    .gameBtn 
+    { 
+        animation-delay: 100ms; 
+    }
+} */

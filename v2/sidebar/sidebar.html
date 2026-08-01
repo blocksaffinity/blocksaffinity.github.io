@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/sidebar/sidestyle.css" id="sidestylelink">
+</head>
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebarButtons">
+        <br>
+        <br>
+        <br>
+        <button onclick="goto('/')" class="sideBtn homeBtn">Home</button>
+        <br>
+        <button onclick="goto('/games/')" class="sideBtn gameBtn">Games</button>
+        <br>
+        <button onclick="goto('/downloads/')" class="sideBtn downBtn">Downloads</button>
+        <br>
+        <button onclick="goto('/projects/')" class="sideBtn projBtn">Projects</button>
+        <br>
+        <button onclick="goto('/contact/')" class="sideBtn contBtn">Contact</button>
+        <br>
+        <button onclick="goto('/more/')" class="sideBtn moreBtn">More</button>
+        <br>
+    </div>
+</div>
+<div class="page" id="page" onclick="const Sidebar = new sidebar(); Sidebar.Fly.FlyOut(); SidebarState = 0;"></div>

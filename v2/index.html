@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <title>blocksaffinity | Home</title>
+    <link rel="icon" href="/assets/icon.png">
+
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" id="theme" href="/styles/dark.css">
+    <link rel="stylesheet" id="background-animation" href="/styles/background-animation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/global.js"></script>
+</head>
+
+
+<body onload="setup();">
+    <div class="hero" style="width: 100%; height: 100%; position: fixed;">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+    <div class="messageBox" id="messageBox" style="visibility: hidden;">
+        <h2 class="center-Text messageBox-Title" id="messageBox-Title">messageBox-Title</h2>
+        <br>
+        <p class="center-Text messageBox-Text" id="messageBox-Text">messageBox-Text</p>
+        <br>
+        <button onclick="const MessageBox = new messageBox(); MessageBox.Button.Click.OK();"
+            style="left: 50%; position: absolute;">OK</button>
+        <br>
+    </div>
+    <section>
+        <div id="navbar"></div>
+        <div id="sidebar"></div>
+    </section>
+    <div class="vcenter-ObjectsInside">
+        <span class="welcomeBox" style="transform: translateY(-35px)">
+            <h1 class="center-Text">Hey, I'm <span class="gradient-Text xstrong-Text">blocksaffinity</span></h1>
+            <br>
+            <h3 class="center-Text" stye="padding: 5px"><small>I'm a British high school student whose interests include
+                    maths, physics, computing and engineering.</small></h3>
+        </span>
+        <br>
+    </div>
+
+    <div class="Home-MainPageContent">
+        <div class="home-section-divider">
+            <h1 class="center-Text">Introduction</h1>
+
+            <br>
+
+            <p>You landed on my website!</p>
+            <br>
+            <p>This is the latest version of my personal website, showing who I am and what I do.</p>
+            <br>
+            <p>Take a look around! You can also take a look at the awful source code <a
+                    href="http://source.blocksaffinity.com">here</a>.</p>
+        </div>
+
+        <br>
+
+        <div class="home-section-divider">
+            <h1 class="center-Text">About Me</h1>
+
+            <br>
+
+            <p>I'm simply a teenager who rarely goes outside.</p>
+            <br>
+            <p>I've been interested in computer science pretty much since I learnt how to turn one on at the age of 5.
+            </p>
+            <br>
+            <p>I began my programming journey with Scratch, then Python and a touch of web development.</p>
+            <p>Since then, I've learnt a hint of C#.</p>
+            <br>
+            <p>You can take a look at my projects <a href="/projects/">here</a>.</p>
+        </div>
+
+        <br>
+
+        <div class="home-section-divider">
+            <h1 class="center-Text">About This Website</h1>
+
+            <br>
+
+            <p>This is the 2nd version of my personal website.</p>
+            <p><small>Interested in seing the first? Check out <b>More » Legacy Site</b></small></p>
+            <br>
+            <p>I've made it fully responsive, so it <i>should</i> work fine on a phone. No promises.</p>
+            <p><small style="color:rgb(255, 193, 193);">Mobile sidebar broken — I'll fix it "soon".</small></p>
+            <br>
+            <p>This is mainly a fun project, aiming to improve my skills practically and maybe show off to employers.
+            </p>
+            <br>
+            <p>It's open source, please feel free to steal anything you would like (except for copyrighted material). Sorry about the awful coding.</p>
+            <br>
+            <p>Interested in how it works? It's all hosted on GitHub Pages. I'm not paying for hosting when I can get it
+                for free, with it also being easier to make changes right here in VS Code.</p>
+        </div>
+
+        <br>
+
+        <div class="home-section-divider">
+            <h1 class="center-Text">My Experience</h1>
+
+            <br>
+
+            <p>I'm only a minor of course, don't expect much, but I do have:</p>
+            <ul>
+                <li>Experience in basic to advanced file management</li>
+                <li>Experience in common productivity apps including the Microsoft Office suite</li>
+                <li>Experience in various Windows versions, 3.0 (1992) through 11 (2021)</li>
+                <li>Experience in popular text-based languages Python and C#</li>
+                <li>Experience in block-based language Scratch</li>
+                <li>Experience in physical computing (building and troubleshooting)</li>
+                <li>Experience in popular text-based languages Python and C#</li>
+                <li>Moderate experience in popular web development languages HTML and CSS</li>
+                <li>Minor experience in popular web development language JavaScript</li>
+                <li>Minor experience using Linux based systems Ubuntu Desktop and Ubuntu Server</li>
+                <li>Minor experience in basic network configuration such as port forwarding</li>
+            </ul>
+        </div>
+
+        <br>
+
+
+        <div class="home-section-divider">
+            <h1 class="center-Text">Featured Projects</h1>
+
+            <br>
+            <!-- <iframe src="https://discord.com/widget?id=1355908254781280306&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
+
+            <!-- onclick="goto('/projects/pleiadesmc/')" -->
+            <div class="Box HoverBox mainFeatProj" onclick="new_tab(DcLink_plmc)">
+                <h2 class="center-Text"><span class="plmc-gradient-text">Pleiades</span>MC</h2>
+                <!-- <p class="center-Text">Information</p> -->
+                <hr>
+                <p class="center-Text">
+                    Welcome to the friendliest server in outer space!
+                    <br>
+                    <br>
+                    Make new friends, build amazing things and have fun battling in the Arena as you climb your way to
+                    the top!
+                    <br>
+                    <br>
+                    Ready to launch into the heat of Season 1?
+                    <br>
+                    <br>
+                </p>
+                <p class="FeatProj-callToAction">Click to join Discord</p>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="Box isdtFeatProj">
+                <h2 class="center-Text"><span class="isdt-gradient-text">ISDT</span></h2>
+                <!-- <p class="center-Text">Information</p> -->
+                <hr>
+                <p class="center-Text">
+                    It's 2026 — why are you still wasting time on the basics?
+                    <br>
+                    <br>
+                    ISDT, or <strong>I</strong>nstant <strong>S</strong>erver <strong>D</strong>eployment
+                    <strong>T</strong>ool, is a unique tool which literally downloads, starts and completes the initial
+                    setup & configuration of your Minecraft server for you.
+                </p>
+                <br> 
+                <br>
+                <p><small style="color:rgb(255, 193, 193);"><i>Currently unavailable.</i></small></p>
+                <!-- <p class="FeatProj-callToAction">Click to learn more</p> -->
+            </div>
+        </div>
+
+        <br>
+
+    </div>
+
+    <footer>
+        <p class="center-Text footer-Text">© blocksaffinity 2026. All rights reserved.</p>
+        <p><a href=""></a></p>
+        <p class="center-Text"><small>Background credit: <a
+                    href="https://alvarotrigo.com/blog/animated-backgrounds-css/">Álvaro Trigo</a></small></p>
+        <br>
+    </footer>
+</body>
+
+</html>

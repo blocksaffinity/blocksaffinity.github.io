@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"livePreview.port": 5500,
+		"livePreview.serverPort": 5500,
+		"livePreview.host": "127.0.0.1"
+	}
+}

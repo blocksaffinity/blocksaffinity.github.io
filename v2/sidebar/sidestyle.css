@@ -1,0 +1,206 @@
+
+
+
+
+@media (min-width: 800px)
+{
+    .sidebar
+    {
+        top: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        transition-duration: 200ms;
+        width: 250px;
+        /* Works the same as margin-left but I'm scared of transforms */
+        /* transform: translateX(-250px); */
+        margin-left: -250px;
+
+        /* MAKE IT FLOAT */
+        margin-left: -270px;
+
+        display: none;
+    }
+}
+@media (min-width: 400px) and (max-width: 799px) /* Square desktop view */
+{
+    .sidebar
+    {
+        top: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 990;
+        transition-duration: 200ms;
+        width: 250px;
+        left: -250px;
+
+
+        /* MAKE IT FLOAT */
+        /* Visible offset is 20px. */
+        /* Note: `left: 20px` is set in the animation under "Square desktop view" */
+        height: calc(100vh - 95px); /* Sum of both top and bottom offsets = 20px + 55px + 20px = 75px */
+        margin-top: calc(20px + 45px); /* floating navbar height from top: 45px + 20px = 65px */
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+}
+@media (max-width: 399px) /* Small view */
+{
+    .sidebar
+    {
+        top: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 990;
+        transition-duration: 200ms;
+        width: 400px;
+        left: 400px;
+    }
+}
+.sidebarIn
+{
+    animation: sidebarIn 200ms cubic-bezier(0.075, 0.82, 0.165, 1) 0ms 1 normal forwards;
+}
+.sidebarOut
+{
+    animation: sidebarOut 200ms cubic-bezier(1, 0.25, 0.25, 1) 0ms 1 normal forwards;
+}
+@media (min-width: 400px) /* Square desktop view*/
+{
+    @keyframes sidebarIn
+    {
+        from
+        {
+            /* left: -250px; */ /* Non floating */
+            /* Yes floating, accommodate for margin-left when out = +20px */
+            left: -270px;
+            visibility: hidden;
+        }
+        to
+        {
+            /* left: 0px; */ /* Non floating */
+            /* Yes floating */
+            left: 20px;
+            visibility: visible;
+        }
+    }
+    @keyframes sidebarOut
+    {
+        from
+        {
+            /* left: 0px; */ /* Non floating */
+            /* Yes floating */
+            left: 20px;
+            visibility: visible;
+        }
+        to
+        {
+            /* left: -250px; */ /* Non floating */
+            /* Yes floating, accommodate for margin-left when out = +20px */
+            left: -270px;
+            visibility: hidden;
+        }
+    }
+}
+@media (max-width: 399px) /* Small view */
+{
+    @keyframes sidebarIn
+    {
+        from
+        {
+            left: -400px;
+            visibility: hidden;
+        }
+        to
+        {
+            left: 0px;
+            visibility: visible;
+        }
+    }
+    @keyframes sidebarOut
+    {
+        from
+        {
+            left: 0px;
+            visibility: visible;
+        }
+        to
+        {
+            left: -250px;
+            visibility: hidden;
+        }
+    }
+}
+
+/* @media (max-width: 299px)
+{
+    .sidebar
+    {
+        width: 100%;
+    }
+}
+@media (max-width: 499px)
+{
+    .sidebar
+    {
+        left: 0px;
+    }
+} */
+
+/*
+THIS IS COMMENTED OUT FOR A REASON.
+DON'T YOU EVEN THINK ABOUT UNCOMMENTING IT.
+*/
+/*
+Should probably put an explanation that's my bad but it makes the sidebar appear and fly out again so yeah note to self dont uncomment
+@media (min-width: 800px)
+{
+    .sidebar
+    {
+        animation: sidebarOut 200ms cubic-bezier(1, 0.25, 0.25, 1) 0ms 1 normal forwards;
+    }
+} */
+@media (min-width: 400px) and (max-width: 799px) /* Square desktop view */
+{
+    .sideBtn
+    {
+        width: 250px;
+    }
+}
+@media (max-width: 399px) /* Small view */
+{
+    .sideBtn
+    {
+        width: 100vw;
+    }
+}
+.sideBtn {
+    margin: 0;
+    position: static !important;
+    transform: none;
+    border: none;
+    height: 45px;
+    padding: 0;
+    top: 0;
+    border-radius: 0;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    font-weight: normal;
+
+    transition: background-size 350ms ease;
+    background-size: 0% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.sideBtn:hover {
+    background-position: left center;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+.sideBtn:active
+{
+    transition: background-size 50ms ease;
+    background-position: center center;
+    background-size: 90% 90%;
+}

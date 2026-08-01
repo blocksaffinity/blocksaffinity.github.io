@@ -1,0 +1,272 @@
+/* Disable background animation */
+.hero {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(25, 25, 25);
+}
+
+body
+{
+    /* pick random numbers from 20, 40, 60 */
+    /* peak design strategy */
+    /* background: linear-gradient(
+        140deg,
+        rgb(40, 20, 60) 0%,
+        rgb(20, 60, 60) 40%,
+        rgb(20, 20, 40) 80%
+    ); */
+
+
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+        345deg,
+        rgb(34, 4, 4),
+        rgb(50, 3, 53),
+        rgb(0, 16, 46),
+        rgb(11, 65, 15)
+    );
+    animation: AnimateGradient 15s ease infinite;
+    /* background-image: url("/legacy/assets/frutiger/aeroBg5.jpg");
+    backdrop-filter: blur(15px) brightness(unset); */
+}
+
+p, h1, h2, h3, h4, h5, h6, button, ul
+{
+    color: white;
+}
+a
+{
+    color:rgb(55, 155, 255)
+}
+
+small
+{
+    color: rgb(155, 155, 155);
+}
+small a
+{
+    color:rgb(0, 155, 195);
+}
+
+
+
+button
+{
+    border: 2px solid rgb(190, 190, 190);
+    background-color: rgb(60, 60, 60);
+}
+button:hover
+{
+    background-color: rgb(80, 80, 90);
+}
+button:active
+{
+    box-shadow: 0px 0px black;
+}
+
+vr
+{
+    background-color: rgb(180, 180, 190);
+}
+hr
+{
+    background-color: rgb(100, 100, 100);
+}
+
+.messageBox
+{
+    background-color: rgb(55, 55, 55);
+}
+.messageBox-Title
+{
+    background-color: rgb(65, 65, 65);
+}
+
+.navbar, footer
+{
+    /* !important is required to style footer */
+    background-color: rgba(30, 30, 30, 0.5) !important;
+    
+    /* For some reason the nav bar does not stay fixed to the top
+    when the brightness effect is overwritten so give it the 
+    !important flag: */
+    backdrop-filter: brightness(250%) blur(10px) !important;
+    box-shadow: 0px 0px 15px 0px rgb(20, 20, 20); /* Excluded from footer (overwritten with 0 0 0 0 in global.css) */
+}
+.navBtn
+{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(65, 65, 65, 0.7),
+        rgba(40, 40, 40, 0.4));
+}
+
+.blocksaffinityTitle-BlinkingCursor
+{
+    background-color: white;
+}
+
+.sidebar
+{
+    background: linear-gradient(
+        300deg,
+        rgba(20, 20, 20, 0.5),
+        rgba(60, 60, 60, 0.5));
+    backdrop-filter: brightness(150%) blur(20px);
+}
+.sidebarIn
+{
+    box-shadow: 0px 0px 50px 5px rgb(0, 0, 0);
+}
+
+.sideBtn
+{
+    background-image: linear-gradient(
+        to right,
+        rgba(75, 85, 75, 0.7),
+        rgba(40, 50, 40, 0.2));
+    background-color: transparent;
+}
+.sideBtn:hover
+{
+    background-color: transparent;
+}
+.sideBtn:active
+{
+    background-image: linear-gradient(
+        to right,
+        rgba(65, 65, 65, 1),
+        rgba(60, 60, 60, 1));
+}
+
+.gradient-Text {
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+        25deg,
+        rgb(255, 17, 17),
+        rgb(249, 82, 255),
+        rgb(82, 143, 255),
+        rgb(82, 255, 97)
+    );
+    color: transparent;
+    background-clip: text;
+    animation: AnimateGradient 15s ease infinite;
+}
+@keyframes AnimateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.welcomeBox, .Box
+{
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(50, 50, 50, 0.5);
+    backdrop-filter: blur(10px);
+}
+.InnerBox
+{
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(37, 37, 37);
+}
+
+.FeatProj-callToAction
+{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.mainFeatProj
+{
+    box-shadow: #3c39ef 0px 0px 5px 5px;
+}
+@media (min-width: 650px) /* normal width */
+{
+    .mainFeatProj:hover
+    {
+        box-shadow: #3c39ef 0px 0px 15px 8px;
+    }
+} 
+.AlvaroTrigoShadowGradient-PleiadesMC:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-45deg, #ff4dde 0%, #0008ff 100% );
+    background-size: 300% 30%;
+    transform: translate3d(0px, 0px, 0) scale(1.10);
+    filter: blur(50px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+    animation: AnimateGradient 10s ease infinite;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property)
+*/
+.AlvaroTrigoShadowGradient-PleiadesMC::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+.plmc-gradient-text
+{
+    background-image: linear-gradient(
+        to right,
+        #3c39ef,
+        #527aff
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.isdt-gradient-text
+{
+    background-size: 500% 500%;
+    background-image: linear-gradient(
+        to right,
+        #ffffff,
+        #b6b6b6
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: AnimateGradient 5s ease infinite;
+}
+
+/* This class is to be used EXCLUSIVELY for BLACK images with TRANSPARENT BACKGROUNDS */
+/* When the fill colour is BLACK, the inverse makes it white. This is intended behaviour. */
+/* In styles which are dark, this class should be added and the inverse should be set to 80% */
+/* In styles which are light, 20% */
+.img-theme
+{
+    filter: invert(80%);
+}
+
+footer
+{
+    background-color: rgb(45, 45, 45);
+}
+
+
+/* *************************** */
+/* *** PAGE SPECIFIC STYLES ** */
+/* *************************** */

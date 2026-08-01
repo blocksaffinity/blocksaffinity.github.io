@@ -1,0 +1,204 @@
+body
+{
+    background: linear-gradient(
+        -45deg,
+        rgb(30, 30, 35),
+        rgb(30, 30, 45)
+    );
+}
+
+p, h1, h2, h3, h4, h5, h6, ul
+{
+    color: white;
+}
+
+button
+{
+    border: 2px solid rgb(190, 190, 190);
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+button:hover
+{
+    background-color: rgb(80, 80, 90);
+}
+button:active
+{
+    box-shadow: 0px 0px black;
+}
+
+.navBtn
+{
+    background: transparent;
+    text-shadow: 0 0 5px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+.navBtn:hover {
+    background: transparent;
+    text-shadow: 0 0 10px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+
+vr
+{
+    background-color: rgb(180, 180, 190);
+}
+hr
+{
+    background-color: rgb(180, 180, 190);
+}
+
+.messageBox
+{
+    background-color: rgb(55, 55, 65);
+}
+
+.messageBox-Title
+{
+    background-color: rgb(65, 65, 65);
+}
+
+.navbar
+{
+    background-color: rgba(30, 30, 40, 1);
+    box-shadow: 0px 0px 25px 5px rgb(0, 0, 0);
+}
+
+.menu
+{
+    text-shadow: 0 0 5px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+.menu:hover
+{
+    text-shadow: 0 0 10px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+
+.blocksaffinityTitle
+{
+    text-shadow: 0 0 5px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+.blocksaffinityTitle:hover
+{
+    text-shadow: 0 0 10px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+
+.blocksaffinityTitle-BlinkingCursor
+{
+    background-color: white;
+    box-shadow: 0 0 10px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+
+.sidebar
+{
+    background: linear-gradient(
+        0deg,
+        rgb(30, 30, 40),
+        rgb(30, 30, 60));
+}
+.sidebarIn
+{
+    box-shadow: 0px 0px 50px 5px rgb(0, 0, 0);
+}
+
+.sideBtn
+{
+    background-color: transparent;
+    text-shadow: 0 0 5px, 
+        0 0 2px white, 
+        0 0 10px rgb(10, 100, 10), 
+        0 0 25px rgb(10, 170, 10);
+}
+.sideBtn:hover
+{
+    background-color: transparent;
+    text-shadow: 0 0 5px, 
+        0 0 15px white, 
+        0 0 20px rgb(10, 100, 10), 
+        0 0 35px rgb(10, 170, 10);
+}
+
+.welcomeBox, .Box
+{
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    background-color: rgb(37, 37, 37);
+}
+.InnerBox
+{
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(37, 37, 37);
+}
+
+.FeatProj-callToAction
+{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.mainFeatProj
+{
+    box-shadow: #3c39ef 0px 0px 5px 5px;
+}
+@media (min-width: 650px) /* normal width */
+{
+    .mainFeatProj:hover
+    {
+        box-shadow: #3c39ef 0px 0px 15px 8px;
+    }
+} 
+
+.plmc-gradient-text
+{
+    background-image: linear-gradient(
+        to right,
+        #3c39ef,
+        #527aff
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.isdt-gradient-text
+{
+    background-size: 500% 500%;
+    background-image: linear-gradient(
+        to right,
+        #ffffff,
+        #b6b6b6
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: AnimateGradient 5s ease infinite;
+}
+
+/* This class is to be used EXCLUSIVELY for BLACK images with TRANSPARENT BACKGROUNDS */
+/* When the fill colour is BLACK, the inverse makes it white. This is intended behaviour. */
+/* In styles which are dark, this class should be added and the inverse should be set to 80% */
+/* In styles which are light, 20% */
+.img-theme
+{
+    filter: invert(80%);
+}
+
+footer
+{
+    background-color: rgb(45, 45, 45);
+}
