@@ -63,7 +63,7 @@ let SidebarState = 0;
 // Links to games, downloads and projects etc.
 const BSAAFBIAT = "https://raw.githubusercontent.com/blocksaffinity/blocksaffinity.github.io/refs/heads/main/games/bsaafbiat/blocksaffinity's%20shocking%20attempt%20at%20flappy%20bird%20in%20a%20terminal%20v1.exe"
 const BSAAFBIU = "https://raw.githubusercontent.com/blocksaffinity/blocksaffinity.github.io/refs/heads/main/games/blocksaffinity's%20shocking%20attempt%20at%20flappy%20bird%20in%20Unity.7z"
-const JS_CLICKER_V1 = "/legacy/clicker.html"
+const JS_CLICKER_V1 = "/v1/clicker.html"
 
 // ==================================================
 
@@ -71,7 +71,7 @@ const JS_CLICKER_V1 = "/legacy/clicker.html"
 // But what this does is injects everything from navbar.html into the navbar element
 // Ts is why we need a navbar element
 function load_navbar() {
-    fetch("/navbar/navbar.html")
+    fetch("/v2/navbar/navbar.html")
         .then(response => {
             if (!response.ok) throw new Error("Navbar failed to load");
             return response.text();
@@ -83,7 +83,7 @@ function load_navbar() {
 }
 
 function load_sidebar() {
-    fetch("/sidebar/sidebar.html")
+    fetch("/v2/sidebar/sidebar.html")
         .then(response => {
             if (!response.ok) throw new Error("Sidebar failed to load");
             return response.text();
@@ -134,68 +134,68 @@ function setup() {
                 if (SavedTheme == null) // If the user is yet to set a theme:
                 {
                     // Initiate dark mode
-                    document.getElementById("theme").href = "/styles/dark.css";
+                    document.getElementById("theme").href = "/v2/styles/dark.css";
                 }
 
                 else if (SavedTheme == "dark") {
                     // Initiate dark mode
-                    document.getElementById("theme").href = "/styles/dark.css";
+                    document.getElementById("theme").href = "/v2/styles/dark.css";
                 }
 
                 else if (SavedTheme == "light") {
                     // Initiate light mode
-                    document.getElementById("theme").href = "/styles/light.css";
+                    document.getElementById("theme").href = "/v2/styles/light.css";
                 }
 
                 else if (SavedTheme == "glass") {
                     // Initiate glass (previously frutiger aero) mode
-                    document.getElementById("theme").href = "/styles/glass.css";
+                    document.getElementById("theme").href = "/v2/styles/glass.css";
                 }
 
                 else if (SavedTheme == "basic") {
                     // Initiate basic mode
-                    document.getElementById("theme").href = "/styles/basic.css";
+                    document.getElementById("theme").href = "/v2/styles/basic.css";
                 }
 
                 else if (SavedTheme == "highcontrast") {
                     // Initiate high contrast mode
-                    document.getElementById("theme").href = "/styles/highcontrast.css";
+                    document.getElementById("theme").href = "/v2/styles/highcontrast.css";
                 }
 
                 else if (SavedTheme == "neon") {
                     // Initiate neon mode
-                    document.getElementById("theme").href = "/styles/neon.css";
+                    document.getElementById("theme").href = "/v2/styles/neon.css";
                 }
             }
 
             else if (theme == 1) // Dark
             {
-                document.getElementById("theme").href = "/styles/dark.css";
+                document.getElementById("theme").href = "/v2/styles/dark.css";
             }
 
             else if (theme == 2) // Light
             {
-                document.getElementById("theme").href = "/styles/light.css";
+                document.getElementById("theme").href = "/v2/styles/light.css";
             }
 
             else if (theme == 3) // Glass (previously Frutiger Aero)
             {
-                document.getElementById("theme").href = "/styles/glass.css";
+                document.getElementById("theme").href = "/v2/styles/glass.css";
             }
 
             else if (theme == 4) // Basic
             {
-                document.getElementById("theme").href = "/styles/basic.css";
+                document.getElementById("theme").href = "/v2/styles/basic.css";
             }
 
             else if (theme == 5) // High Contrast
             {
-                document.getElementById("theme").href = "/styles/highcontrast.css";
+                document.getElementById("theme").href = "/v2/styles/highcontrast.css";
             }
 
             else if (theme == 6) // Neon
             {
-                document.getElementById("theme").href = "/styles/neon.css";
+                document.getElementById("theme").href = "/v2/styles/neon.css";
             }
         }
 

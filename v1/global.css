@@ -25,10 +25,6 @@ p
     color: white;
     text-align: center;
     cursor: default;
-    padding: 10px;
-    margin: 10px;
-    margin-left: 49px;
-    margin-right: 49px;
     border-radius: 5px;
     transition-duration: 200ms;
     background-color: rgb(45, 45, 45);

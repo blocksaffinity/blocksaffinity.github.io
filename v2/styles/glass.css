@@ -28,7 +28,7 @@ body
         rgb(11, 65, 15)
     );
     animation: AnimateGradient 15s ease infinite;
-    /* background-image: url("/legacy/assets/frutiger/aeroBg5.jpg");
+    /* background-image: url("/legacy/v2/assets/frutiger/aeroBg5.jpg");
     backdrop-filter: blur(15px) brightness(unset); */
 }
 
