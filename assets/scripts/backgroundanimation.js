@@ -89,6 +89,9 @@
 
     // Resize handling
     window.addEventListener('resize', () => {
+        // dirty fix, on mobile height changes constantly when scrolling so we only want to resize when the width changes
+        if (width === window.innerWidth) return;
+
         width = window.innerWidth;
         height = window.innerHeight;
         canvas.width = width;
