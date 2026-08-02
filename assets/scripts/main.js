@@ -26,3 +26,15 @@ function mobile_toggle_navbar()
         navbarCollapseBtnP.innerHTML = "<b>☰</b>";
     }
 }
+
+function close_navbar()
+{
+    const navbar = document.getElementById("internal-navbar");
+    const navbarCollapseBtnP = document.getElementById("navbar-mobile-collapse-btn-p");
+
+    if (!navbar.classList.contains("nav-ul-collapsed"))
+    {
+        navbar.classList.add("nav-ul-collapsed");
+    }
+    navbarCollapseBtnP.innerHTML = "<b>☰</b>";
+}
