@@ -7,7 +7,7 @@
     /* Keep behind content */
   }
 
-@media (max-width: 499px) {
+@media (max-width: 399px) {
   canvas {
     display: none;
   }
