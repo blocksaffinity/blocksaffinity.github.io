@@ -1,4 +1,4 @@
-function load_navbar() {
+function load_navbar(page) {
     fetch("/assets/html/navbar.html")
         .then(response => {
             if (!response.ok) throw new Error("Navbar failed to load");
@@ -6,6 +6,7 @@ function load_navbar() {
         })
         .then(data => {
             document.getElementById("navbar").innerHTML = data;
+            document.getElementById(page).classList.add("activenava")
         })
         .catch(err => console.error(err));
 }

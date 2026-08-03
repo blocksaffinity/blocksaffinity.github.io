@@ -36,8 +36,10 @@ body {
     background-color: rgb(30, 30, 35);
     color: rgb(236, 236, 236);
     font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-bottom: 70px;
     z-index: 0;
+
+    /* so mobile navbar is not covering page content: */
+    padding-bottom: 90px;
 }
 
 section {
@@ -113,10 +115,13 @@ small {
     color: rgb(186, 186, 186);
 }
 
-h2,
+section h2,
 .col-t {
     color: rgb(255, 165, 65);
 }
+
+
+
 
 p {
     margin-left: 10px;
@@ -128,7 +133,63 @@ a {
 }
 
 
-@media (min-width: 500px) {
+
+
+
+
+
+
+
+
+.ad
+{
+    overflow: hidden;
+}
+
+.ad h2
+{
+    margin-left: 10px;
+    margin-right: 240px;
+}
+
+.ad p
+{
+    margin-left: 20px;
+    margin-right: 240px;
+}
+
+.ad img
+{
+    float: right;
+    max-height: 200px;
+    width: 40%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10px;
+}
+
+@media (max-width: 599px)
+{
+    .ad
+    {
+        padding: 0;
+    }
+    .ad p
+    {
+        margin-right: 20px;
+    }
+    .ad img
+    {
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+@media (min-width: 600px) {
     .mobile-only {
         display: none;
     }

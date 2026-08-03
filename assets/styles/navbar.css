@@ -3,7 +3,10 @@
   padding: 0;
   margin: 10px;
   overflow: hidden;
-  background-color: #333333;
+
+  background-color: #33333377;
+  backdrop-filter: blur(15px);
+
   border: 2px solid rgb(236, 236, 236);
   border-radius: 10px;
   position: fixed;
@@ -37,7 +40,7 @@
 }
 
 /* Desktop */
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .nav-ul {
     top: 0;
     /* dynamic island ig? */
@@ -48,8 +51,9 @@
   }
 
 
+
   .nav-ul:hover {
-    border-color: rgba(255, 165, 65, 0.7);
+    border-color: rgba(255, 165, 65, 1);
     box-shadow: 0px 0px 5px 0px rgba(255, 165, 65, 1);
   }
 
@@ -102,13 +106,14 @@
   .nav-ul li a:hover::after {
     height: 4px;
   }
+
 }
 
 
 
 
 /* Mobile */
-@media (max-width: 499px) {
+@media (max-width: 599px) {
   .nav-ul {
     bottom: 30px;
     /* height: calc(49px * 4);  CHANGE THIS WHENEVER ADDING A NEW NAVBAR ITEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -158,3 +163,20 @@
   text-align: center;
   cursor: default;
 }
+
+
+
+
+
+.activenava {
+    background-color: #111111;
+    cursor: default;
+  }
+
+  .activenava::before {
+    height: 0 !important;
+  }
+
+  .activenava:hover::after {
+    height: 0 !important;
+  }
