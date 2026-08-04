@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blocksaffinity</title>
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <link rel="stylesheet" href="/assets/styles/navbar.css">
+    <link rel="icon" href="/assets/img/icon.png">
+    <script src="/assets/scripts/main.js"></script>
+    <script src="/assets/scripts/contact.js"></script>
+</head>
+
+<body onload="load_navbar('more');">
+    <nav id="navbar"></nav>
+
+    <main onclick="close_navbar();">
+        <section>
+            <h2>Discord</h2>
+            <p>
+                My most preferable contact method is Discord, reach me at:
+                <br>
+                @<code>blocksaffinity</code> (User ID: <code>938412170184646657</code>)
+                <br>
+                <p>Average response time: <b>6-24 hours</b></p>
+                <button class="primary" id="discordusernamecopy" onclick="copy('discordusernamecopy', 'Copy to Clipboard', 'blocksaffinity')">Copy Username to Clipboard</button>
+                <button id="discordidcopy" onclick="copy('discordidcopy', 'Copy to Clipboard', '938412170184646657')">Copy User ID to Clipboard</button>
+            </p>
+        </section>
+
+        <section>
+            <h2>Gmail</h2>
+            <p>
+                I also have a Gmail address which I check every day:
+                <br>
+                <code>blocksaffinity@gmail.com</code>
+                <br>
+                <p>Average response time: <b>24-48 hours</b></p>
+                <a href="mailto:blocksaffinity@gmail.com"><button class="primary">Send Mail</button></a>
+                <button id="gmailcopy" onclick="copy('gmailcopy', 'Copy to Clipboard', 'blocksaffinity@gmail.com')">Copy to Clipboard</button>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

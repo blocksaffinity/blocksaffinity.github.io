@@ -143,9 +143,20 @@ button {
     transition-duration: 200ms;
 }
 
+.primary
+{
+    background-color: rgb(205, 115, 15);
+    border: 2px solid rgb(255, 165, 65);
+}
+
 @media(min-width: 600px) {
     button:hover {
         border: 2px solid rgb(255, 165, 65);
+    }
+
+    .primary:hover
+    {
+        border: 2px solid rgb(255, 215, 115);
     }
 }
 
