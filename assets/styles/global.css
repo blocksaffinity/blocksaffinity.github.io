@@ -167,6 +167,32 @@ a {
     color: lightskyblue;
 }
 
+.home-header { padding: 18px 12px 22px; }
+.home-header h1 { font-size: clamp(30px, 5vw, 48px); letter-spacing: -1px; }
+.home-kicker, .portfolio-kicker { margin: 0 auto 18px; color: #aaa; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+.home-intro { margin: 14px auto; max-width: 620px; line-height: 1.7; }
+.home-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.home-link { border: 2px solid #eee; border-radius: 5px; color: #eee; padding: 10px 14px; text-decoration: none; font-size: 13px; font-weight: 700; }
+.home-link:hover { border-color: rgb(255, 165, 65); }
+.home-link-primary { background: rgb(205, 115, 15); border-color: rgb(255, 165, 65); }
+
+/* Keep the introductory card compact and let the content breathe around it. */
+.home-section { padding: 6px 10px; }
+.home-header { padding: 8px 8px 12px; }
+.home-header h1 { margin-top: 6px; margin-bottom: 6px; }
+.home-intro { margin-top: 8px; margin-bottom: 8px; }
+.home-links { margin-top: 14px; }
+.home-link:hover { border-color: #eee; }
+.home-link-primary:hover { border-color: rgb(255, 165, 65); }
+
+@media (min-width: 600px) {
+    .home-section { margin-top: 10%; margin-bottom: 10%; }
+}
+
+@media (min-width: 1200px) {
+    .home-section { transform: translateX(-50%) scale(1.08); }
+}
+
 
 
 
@@ -346,3 +372,81 @@ button {
         display: none;
     }
 }
+
+
+
+
+.portfolio-header {
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: min(90%, 600px);
+}
+
+.portfolio-title h1 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.portfolio-line {
+    flex: 1;
+    height: 3px;
+}
+
+.portfolio-line:first-child {
+    background: linear-gradient(
+        to left,
+        white,
+        transparent
+    );
+}
+
+.portfolio-line:last-child {
+    background: linear-gradient(
+        to right,
+        white,
+        transparent
+    );
+}
+
+
+.portfolio-title h1
+{
+    color: transparent;
+    font-weight: 900;
+    background-image: linear-gradient(
+            45deg,
+            #c56e1d 20%,
+            #ffbb28 40%,
+            #ffcd29 50%,
+            #e46c34 70%
+        );
+    
+    background-clip: text;
+    background-size: 500% auto;
+
+    animation: blocksaffinityTitleAnim 5s cubic-bezier(1, 0.5, 0.5, 1) infinite alternate;
+}
+
+@keyframes blocksaffinityTitleAnim
+{
+    0%
+    {
+        background-position: 0% 50%;
+    }
+    
+    100%
+    {
+        background-position: 100% 50%;
+    }
+}
+

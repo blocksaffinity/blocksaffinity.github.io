@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blocksaffinity</title>
+    <title>Portfolio - blocksaffinity</title>
     <link rel="stylesheet" href="/assets/styles/global.css">
     <link rel="stylesheet" href="/assets/styles/navbar.css">
+    <link rel="stylesheet" href="/assets/styles/portfolio.css">
     <link rel="icon" href="/assets/img/icon.png">
     <script src="/assets/scripts/main.js"></script>
 </head>
-
 <body onload="load_navbar('portfolio');">
     <nav id="navbar"></nav>
-
     <main onclick="close_navbar();">
-        <section>
-            <div class="section-header">
-                <p class="section-type">PORTFOLIO COMING SOON</p>
-            </div>
-            <div class="section-content">
-                <h2 style="text-align: center !important;">Coming soon!</h2>
-            </div>
-            <div class="section-footer">
-                
-            </div>
-        </section>
+        <div class="portfolio-page">
+            <section class="portfolio-hero"><p class="portfolio-kicker">PORTFOLIO / BLOCKSAFFINITY</p><h1>Ideas in.<br><span>Things out.</span></h1><p class="portfolio-lede">A collection of projects, experiments and things I have learnt while exploring computing, engineering and the web.</p><div class="portfolio-actions"><a class="portfolio-button portfolio-button-primary" href="#work">See the work v</a><a class="portfolio-button" href="/">Back home</a></div><div class="portfolio-hero-mark" aria-hidden="true">&lt;/&gt;</div></section>
+            <section class="portfolio-section" id="about"><div class="portfolio-section-heading"><span>01</span><h2>What I am about</h2></div><div class="portfolio-about-grid"><div><h3>Curious by default.<br><em>Always building.</em></h3></div><div class="portfolio-copy"><p>I've been interested in computer science since I learnt how to turn a computer on at the age of five. I started with Scratch, moved on to Python, and have been exploring ever since.</p><p>My interests sit across computing, maths, physics and engineering. I like understanding how things work, then making something useful with that understanding.</p></div></div></section>
+            <section class="portfolio-section" id="work"><div class="portfolio-section-heading"><span>02</span><h2>Things I have made</h2></div><div class="portfolio-projects"><article class="portfolio-project"><div class="portfolio-project-art art-code">&gt;_</div><div class="portfolio-project-content"><p class="portfolio-project-type">01 / web development</p><h3>This website</h3><p>The third version of my personal website, built to document who I am and what I do.</p><div class="portfolio-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="https://github.com/blocksaffinity/blocksaffinity.github.io">View the source -&gt;</a></div></article><article class="portfolio-project"><div class="portfolio-project-art art-grid">*</div><div class="portfolio-project-content"><p class="portfolio-project-type">02 / game development</p><h3>Small game projects</h3><p>Experiments in making games, from a terminal-based flappy bird attempt to a Unity project.</p><div class="portfolio-tags"><span>C#</span><span>Unity</span><span>Python</span></div><a href="/services/">See more projects -&gt;</a></div></article></div></section>
+            <section class="portfolio-section" id="stack"><div class="portfolio-section-heading"><span>03</span><h2>My toolkit</h2></div><div class="portfolio-stack-intro"><h3>Learning by<br><em>making things.</em></h3><p>Tools and technologies I have experience with, from my first Scratch projects to the web pages and programs I build today.</p></div><div class="portfolio-languages"><div><b class="lang-py">Py</b><span>Python</span></div><div><b class="lang-csharp">C#</b><span>C#</span></div><div><b class="lang-html">&lt;/&gt;</b><span>HTML</span></div><div><b class="lang-css">#</b><span>CSS</span></div><div><b class="lang-js">JS</b><span>JavaScript</span></div><div><b class="lang-git">◆</b><span>Git</span></div></div></section>
+            <section class="portfolio-section portfolio-contact" id="contact"><div class="portfolio-section-heading"><span>04</span><h2>Keep exploring</h2></div><h3>There is always<br><em>more to learn.</em></h3><p>Have a look around the rest of the site, or visit the source code to see how this place is put together.</p><a class="portfolio-email" href="https://github.com/blocksaffinity/blocksaffinity.github.io">github.com/blocksaffinity -&gt;</a></section>
+        </div>
     </main>
 </body>
-
 </html>
