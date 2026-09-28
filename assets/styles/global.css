@@ -49,6 +49,8 @@ section {
     border: 2px solid #ddddee;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+    position: relative;
+    display: grid;
 }
 
 @media (min-width: 600px) {
@@ -121,6 +123,39 @@ section h2,
 }
 
 
+section .section-header {
+    background:
+        linear-gradient(
+            to bottom,
+            rgb(75, 75, 75),
+            rgba(0, 0, 0, 0)
+        );
+    border-radius: 5px;
+}
+
+section .section-content {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    grid-row: 2/3;
+}
+
+section .section-footer {
+    border-radius: 5px;
+    grid-column: 1/2;
+    grid-row: 3/3;
+}
+
+
+section .section-type 
+{
+    font-size: small;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+    top: 0;
+    left: 0;
+}
+
+
 
 
 p {
@@ -135,11 +170,12 @@ a {
 
 
 
-button {
+button {    
     padding: 10px;
     border-radius: 5px;
     border: 2px solid rgb(236, 236, 236);
     margin-left: 5px;
+    bottom: 5px;
     transition-duration: 200ms;
 }
 
@@ -162,8 +198,56 @@ button {
 
 
 
+.wide-ad-header
+{
+    height: 300px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-image: 
+        linear-gradient(
+            135deg,
+            rgb(185, 103, 9) 50%,
+            rgba(226, 136, 62, 0)),
+        url("/assets/img/services/mcjdev/code1.png");
+    
+}
 
+.wide-ad-header-content
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 80%;
 
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+@media (max-width: 649px)
+{
+    .wide-ad-header
+    {
+        margin-top: 0;
+        top: 0;
+        height: 150px;
+        border-radius: 10px;
+    }
+    .wide-ad-header-content
+    {
+        max-width: max-content;
+    }
+    .wide-ad-header h4
+    {
+        font-size: medium;
+        margin-left: 0;
+    }
+    .wide-ad-header p
+    {
+        font-size: small;
+    }
+}
 
 .ad {
     overflow: hidden;
@@ -188,7 +272,7 @@ button {
     border-radius: 10px;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 699px) {
     .ad {
         padding: 0;
     }
