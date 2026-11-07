@@ -1,0 +1,150 @@
+.portfolio-tools-container
+{
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 95%;
+    white-space: nowrap;
+
+    /* horizontal positioning */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Background gradient overlay */
+.portfolio-tools-container::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none; 
+    z-index: 2; 
+    background-image: linear-gradient(
+        to right, 
+        rgb(30, 30, 35),
+        rgba(255,255,255, 0) 25%,
+        rgba(255,255,255, 0) 85%,
+        rgb(30, 30, 35)
+    );
+}
+
+/* Wrapper setups */
+.tool-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Base image sizes and smooth transitions */
+.portfolio-tools-container img
+{
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    transition: height 0.15s ease-in-out,
+                transform 0.15s ease-in-out,
+                filter 0.15s ease-in-out;
+}
+
+
+
+.tool-wrapper .tooltip-box {
+    display: none;
+}
+
+
+/* if anyone is reading this, this is AI, i'm very sorry */
+
+@media (min-width: 600px) {
+    
+    /* Target the image when the wrapper container is hovered */
+    .tool-wrapper:hover img
+    {
+        transform: scale(1.2) translateY(3.2px); /* Changed direction to scale downwards subtly */
+        filter: brightness(1.1) drop-shadow(0 0 2px dimgray);
+    }
+
+    /* Structured Rich Tooltip Box Layout (Positioned Below) */
+    .tool-wrapper .tooltip-box {
+        display: block; /* Reactivate block structure for desktop */
+        position: absolute;
+        top: calc(100% + 12px); /* CHANGED: Anchored to the top element edge instead of bottom */
+        left: 50%;
+        transform: translateX(-50%) translateY(-5px); /* Animation origin begins slightly higher */
+        
+        /* Box Presentational Styles */
+        background-color: #1f2937;
+        color: #ffffff;
+        padding: 12px 16px;
+        border-radius: 8px;
+        width: 220px; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 20; 
+        
+        /* Normal Text Flow */
+        white-space: normal; 
+        text-align: left;
+        
+        /* Visibility States & Transitions */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+
+    /* Upward Arrow Indicator */
+    .tool-wrapper .tooltip-box::after {
+        content: '';
+        position: absolute;
+        bottom: 100%; /* CHANGED: Places the pointer at the top of the box */
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 6px solid transparent;
+        border-bottom-color: #1f2937; /* CHANGED: Colors the bottom border so it points up */
+    }
+
+    /* Typography Rules */
+    .tooltip-title {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .tooltip-desc {
+        font-size: 0.8rem;
+        color: #d1d5db;
+        margin: 0 0 8px 0;
+        line-height: 1.3;
+    }
+
+    .tooltip-meta {
+        font-size: 0.75rem;
+        border-top: 1px solid #374151;
+        padding-top: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        color: #9ca3af;
+    }
+
+    .tooltip-meta strong {
+        color: #ffffff;
+    }
+
+    /* Experience Level Metrics Colors */
+    .tooltip-meta .exp-high { color: #10b981; } 
+    .tooltip-meta .exp-med  { color: #f59e0b; } 
+    .tooltip-meta .exp-low  { color: #ef4444; } 
+
+    /* Active hover trigger setup */
+    .tool-wrapper:hover .tooltip-box {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0); /* Drops smoothly down into position */
+    }
+}
