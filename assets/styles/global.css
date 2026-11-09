@@ -406,6 +406,7 @@ button {
     padding: 0;
     padding-top: 10px;
     overflow: hidden;
+    transition: box-shadow 200ms ease-in-out;
 }
 
 .profilecard img {
