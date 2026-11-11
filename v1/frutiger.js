@@ -1,10 +1,10 @@
 let currentBg = 11; // i dont know why this is here but its fine dw
-let availableBg = ["assets/frutiger/aeroBg1.jpg", "assets/frutiger/aeroBg2.jpg", "assets/frutiger/aeroBg3.jpg", "assets/frutiger/aeroBg4.jpg", "assets/frutiger/aeroBg5.jpg", "assets/frutiger/aeroBg6.jpg", "assets/frutiger/aeroBg7.jpg", "assets/frutiger/aeroBg8.jpg", "assets/frutiger/aeroBg10.jpg", "assets/frutiger/aeroBg11.jpg", "assets/frutiger/aeroBg12.jpg",];
+let availableBg = ["assets/frutiger/aeroBg1.webp", "assets/frutiger/aeroBg2.webp", "assets/frutiger/aeroBg3.webp", "assets/frutiger/aeroBg4.webp", "assets/frutiger/aeroBg5.webp", "assets/frutiger/aeroBg6.webp", "assets/frutiger/aeroBg7.webp", "assets/frutiger/aeroBg8.webp", "assets/frutiger/aeroBg10.webp", "assets/frutiger/aeroBg11.webp", "assets/frutiger/aeroBg12.webp",];
 
 // ** NOTE TO FUTURE SELF **
 // availableBg contains the full path
 // savedBg also contains the full path
-// Do not assume that you need to do url("assets/frutiger/{savedBg}") as that will evaluate to url("assets/frutiger/assets/frutiger/aeroBg<x>.jpg")
+// Do not assume that you need to do url("assets/frutiger/{savedBg}") as that will evaluate to url("assets/frutiger/assets/frutiger/aeroBg<x>.webp")
 // *** basically just do url(savedBg) ***
 
 function setup() { // ran on page loading using onload attribute in body tag
@@ -15,7 +15,7 @@ function setup() { // ran on page loading using onload attribute in body tag
     } else {
         // if savedBg returns false
         // make the background the default one which is 11 because it looks gorgeous and i probably spelt that wrong
-        document.getElementById("body").style.backgroundImage = 'url("assets/frutiger/aeroBg11.jpg")'; // Default bg: 11
+        document.getElementById("body").style.backgroundImage = 'url("assets/frutiger/aeroBg11.webp")'; // Default bg: 11
     }
 }
 

@@ -219,20 +219,20 @@ hr
 
 .stars
 {
-    background: transparent url(assets/pleiadesmc/stars.png) repeat top center;
+    background: transparent url(assets/pleiadesmc/stars.webp) repeat top center;
     z-index: -50;
 }
 
 .twinkling
 {
-    background: transparent url(assets/pleiadesmc/twinkling.png) repeat top center;
+    background: transparent url(assets/pleiadesmc/twinkling.webp) repeat top center;
     z-index: -48;
     animation: move-twinkle-back 200s linear infinite;
 }
 
 .clouds
 {
-    background: transparent url(assets/pleiadesmc/clouds.png) repeat top center;
+    background: transparent url(assets/pleiadesmc/clouds.webp) repeat top center;
     z-index: -46;
     opacity: 0.3;
     animation: move-clouds-back 200s linear infinite;
