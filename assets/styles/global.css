@@ -365,7 +365,7 @@ button {
 @media(min-width: 600px) {
     button:hover {
         border: 2px solid rgb(255, 165, 65);
-        transform: scale(1.1) translateY(-2px);
+        transform: scale(1.1);
     }
 }
 
@@ -455,10 +455,6 @@ button {
 .inline-buttons div a button
 {
     margin: 0;
-}
-.inline-buttons div a button:hover
-{
-    transform: scale(1.1);
 }
 
 
