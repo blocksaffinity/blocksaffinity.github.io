@@ -161,7 +161,7 @@ section .section-header {
             rgb(75, 75, 75),
             rgba(0, 0, 0, 0)
         );
-    border-radius: 5px;
+    border-radius: 10px;
     height: 36px;
     grid-row: 0/3;
     /* background: red; */
@@ -542,6 +542,215 @@ button {
     .profilecard
     {
         width: auto;
+    }
+}
+
+
+.timeline {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.timeline ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Central timeline line */
+.timeline ol::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(255, 165, 65) 5%,
+        rgb(255, 165, 65) 95%,
+        transparent
+    );
+    box-shadow: 0 0 10px rgb(255, 165, 65, 0.4);
+}
+
+/* Timeline entries */
+.timeline ol li {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 15px 35px;
+    position: relative;
+}
+
+/* Alternating sides */
+.timeline ol li:nth-child(odd) {
+    margin-right: auto;
+}
+
+.timeline ol li:nth-child(even) {
+    margin-left: 50%;
+}
+
+/* Timeline nodes */
+.timeline ol li::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 24px;
+    background: rgb(255, 165, 65);
+    border: 3px solid rgb(30, 30, 35);
+    border-radius: 50%;
+    box-sizing: content-box;
+    box-shadow: 0 0 12px rgb(255, 165, 65, 0.7);
+    transition: transform 200ms ease-in-out;
+}
+
+.timeline ol li:nth-child(odd)::before {
+    right: -10px;
+}
+
+.timeline ol li:nth-child(even)::before {
+    left: -10px;
+}
+
+.timeline ol li:hover::before {
+    transform: scale(1.3);
+}
+
+/* Date labels */
+.timeline-date {
+    display: block;
+    color: rgb(255, 165, 65);
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Interactive cards */
+.timeline details {
+    background: linear-gradient(
+        to bottom,
+        rgb(60, 60, 65),
+        rgb(45, 45, 50)
+    );
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+    transition:
+        border-color 200ms ease-in-out,
+        box-shadow 200ms ease-in-out;
+}
+
+.timeline details:hover {
+    border-color: rgb(124, 80, 29);
+    box-shadow: 0 0 15px rgb(46, 29, 10);
+}
+
+/* Clickable card header */
+.timeline summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+    user-select: none;
+}
+
+.timeline summary::-webkit-details-marker {
+    display: none;
+}
+
+.timeline summary h3 {
+    margin: 0;
+    color: rgb(255, 165, 65);
+    font-size: 1rem;
+}
+
+/* Expand icon */
+.timeline-expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(255, 165, 65, 0.12);
+    color: rgb(255, 165, 65);
+    font-size: 20px;
+    transition: transform 200ms ease-in-out;
+}
+
+.timeline details[open] .timeline-expand {
+    transform: rotate(45deg);
+}
+
+/* Expanded content */
+.timeline-content {
+    padding: 0 15px 15px;
+    animation: timelineReveal 200ms ease-in-out;
+}
+
+.timeline-content p {
+    margin: 0;
+    max-width: unset;
+    line-height: 1.6;
+}
+
+@keyframes timelineReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 599px) {
+    .timeline {
+        margin: 30px 0;
+    }
+
+    .timeline ol::before {
+        left: 15px;
+    }
+
+    .timeline ol li {
+        width: 100%;
+        margin: 0;
+        padding: 15px 0 15px 40px;
+    }
+
+    .timeline ol li:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .timeline ol li::before,
+    .timeline ol li:nth-child(odd)::before,
+    .timeline ol li:nth-child(even)::before {
+        left: 8px;
+        right: auto;
+    }
+
+    .timeline summary {
+        padding: 12px;
+    }
+
+    .timeline summary h3 {
+        font-size: 0.95rem;
     }
 }
 
